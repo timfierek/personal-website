@@ -5,3 +5,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body {
+  background-color: #28272c;
+}
+
+.nav-buttons {
+  position: absolute;
+  display: flex;
+  margin-left: 5px;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
