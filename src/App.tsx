@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar'; 
-import Project from './components/Project';
 import Landing from './components/Landing';
 import { JsxElement } from 'typescript';
 

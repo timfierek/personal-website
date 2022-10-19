@@ -6,17 +6,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background-color: #28272c;
+*::selection{
+  border: 1px solid #fff;
+  background-color: rgba(255,255,255,.3);;
 }
 
-.nav-buttons {
-  position: absolute;
-  display: flex;
-  margin-left: 5px;
-  height: 100%;
-  bottom: 0;
-  left: 0;
+body {
+  background-color: #28272c;
 }
 
 button {

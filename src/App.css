@@ -1,78 +1,3 @@
-/* Navbar parent container */
-nav {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  
-  color: #171717;
-  background-color: black;
-  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-  box-shadow: 0px 9px 28px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 9px 28px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 9px 28px 0px rgba(0,0,0,0.75);
-}
-
-/* 'Tim Fierek' text on navbar */
-#name {
-  align-self: center;
-
-  font-family: 'Pilat Wide';
-  font-size: 7vw;
-  color: #ffffff;
-}
-
-/* Project parent container */
-.project {
-  padding: 2vh 2vw;
-  align-items: center;
-  display: flex;
-  border: 2px red solid;
-}
-
-/* Image container */
-.photo-container {
-  width: 50vw;
-  height: 50vh;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 2% 2%;
-
-  padding: 1%;
-  border: 2px solid white;
-}
-
-/* Individual photos in for project */
-.photo-container div {
-  border: 2px solid white;
-}
-
-.line {
-  width: 10vw;
-  height: 0.7vw;
-  margin-left: 1vw;
-  background-color: white;
-}
-
-.bracket {
-  color: white;
-  margin-bottom: 3.45vw;
-  margin-left: -2vw;
-
-  font-size: 20vw;
-  font-weight: 100;
-  transform: scaleY(1.5);
-}
-
-.project-skills {
-  color: white;
-}
-
-.project-skills ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-
 /************************************************************/
 
 @keyframes gradient {
@@ -105,9 +30,6 @@ nav {
   flex-direction: column;
   width: 75vw;
   height: auto;
-  
-  border: 1px solid black;
-  border-radius: 10px;
 }
 
 .center-text h1 {
@@ -142,43 +64,6 @@ nav {
   font-weight: 300;
 }
 
-.row-container {
-  display: flex;
-  border: 1px solid black;
-  align-items: center;
-  
-}
-
-.vertical-button {
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
-  border: 1px solid black;
-  border-radius: 999px;
-  position: absolute;
-
-  height: 40px;
-  width: 400px;
-
-  transform-origin: top left;
-  left:0;
-  top:50%;
-  transform: rotate(-90deg) translateX(-50%);
-} 
-
-#left-button {
-  left: 0;
-}
-
-#right-button {
-  
-}
-
-.vertical-button:hover {
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
-  background-color: rgba(255,255,255,.25);
-}
-
 .horizontal-button {
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
@@ -196,16 +81,7 @@ nav {
   background-color: rgba(255,255,255,.25);
 }
 
-.icons {
-  position: relative;
-  align-self: flex-end;
-
-  right: 20px;
-  top: 20px;
-}
-
 .icons a {
-  margin: 0vw 0vw 0vw 40px;
   font-size: 45px;
   color: black;
 }
@@ -214,5 +90,11 @@ nav {
   color: white;
 }
 
-
-
+.header {
+  display: flex;
+  justify-content:space-between;
+  align-content: center;
+  
+  width: 100%;
+  height: 50px;
+}
