@@ -1,4 +1,4 @@
-/************************************************************/
+/**Landing Page******************************************************/
 
 @keyframes gradient {
   0% {
@@ -81,6 +81,9 @@
   background-color: rgba(255,255,255,.25);
 }
 
+/**Landing Page******************************************************/
+
+
 /**Social Icons**********************************/
 
 .icons {
@@ -110,12 +113,12 @@ nav {
   align-content: center;
   
   width: 100%;
-  height: 50px;
+  height: auto;
 }
 
 .nav-buttons button {
-  margin: 10px 10px;
-  width: 15vw;
+  margin: 10px 0.2vw;
+  width: 12vw;
   height: 50px;
 
   font-family: 'Inter';
@@ -135,3 +138,66 @@ nav {
 /**Nav bar**********************************************/
 
 
+/**Main Content**********************************************/
+
+.main-content {
+  padding: 2.5vw 2.5vw;
+}
+
+/**Main Content**********************************************/
+
+
+/**About Section**********************************************/
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headshot-container {
+  width: 50vw;
+  height: auto;
+
+  border: 1px solid #47B5FF;
+  border-radius: 9px;
+}
+
+.headshot-img {
+  position: relative;
+  max-width: 100%;
+
+  right: -1.2vw;
+  bottom: -1.5vw;
+  
+  border-radius: 9px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-top: 10px;
+  text-align: justify;
+  width: 40vw;
+}
+
+.contact-form {
+  border: 2px solid red;
+  height: 25vh;
+}
+
+.info-container p {
+  width: 100%;
+  font-family: 'Karla';
+  line-height: 130%;
+  font-size: 2vw;
+  color: white;
+}
+
+.info-container a {
+  font-family: 'Karla';
+  line-height: 130%;
+  font-size: 2vw;
+  color:burlywood;
+}
