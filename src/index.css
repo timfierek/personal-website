@@ -1,9 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+
+  scrollbar-width: none;
   font-family: 'Pilat Wide', 'Inter', 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 *::selection{
@@ -12,7 +18,8 @@
 }
 
 body {
-  background-color: #28272c;
+  /* background-color: #28272c; */
+  background-color: black;
 }
 
 button {

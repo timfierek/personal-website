@@ -1,18 +1,24 @@
 import React from 'react';
 import './App.css';
 import Landing from './components/Landing';
-import { JsxElement } from 'typescript';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
 
 function App() {
-  const [curPage, setCurPage] = React.useState(<Landing />);
+  const [showLanding, setShowLanding] = React.useState(true);
 
-  function changePage(newPage: any) {
-    setCurPage(newPage);
+  function toggleLanding() {
+    setShowLanding(prevVal => (!prevVal))
   }
 
   return (
     <div className="App">
-      <Landing />
+      
+      {showLanding && <Landing handleClick={toggleLanding}/>}
+      
+      <Header navigateHome={toggleLanding}/>
+      <MainContent/>
+
     </div>
   );
 }
