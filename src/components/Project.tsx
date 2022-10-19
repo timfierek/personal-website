@@ -1,6 +1,6 @@
 import React from "react";
 
-function Project() {
+function Project(props: any) {
     return (
         <div className="project">
             <div className="photo-container">
@@ -19,7 +19,7 @@ function Project() {
                 </ul>
             </div>
         </div>
-    );
+    )
 }
 
 export default Project;

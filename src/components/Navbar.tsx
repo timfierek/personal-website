@@ -3,14 +3,13 @@ import React from "react";
 function Navbar() {
     return (
         <nav>
-            <div className="nav-buttons">
+            {/* <div className="nav-buttons">
                 <button>Projects</button>
                 <button>Skills</button>
                 <button>Contact</button>
-            </div>
+            </div> */}
 
             <h3 id="name">Tim Fierek</h3>
-
 
             {/* <div className="nav-icons">
                 <i className="fa-brands fa-linkedin"></i>

@@ -2,12 +2,19 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar'; 
 import Project from './components/Project';
+import Landing from './components/Landing';
+import { JsxElement } from 'typescript';
 
 function App() {
+  const [curPage, setCurPage] = React.useState(<Landing />);
+
+  function changePage(newPage: any) {
+    setCurPage(newPage);
+  }
+
   return (
     <div className="App">
-      <Navbar />
-      <Project />
+      <Landing />
     </div>
   );
 }
