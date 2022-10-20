@@ -150,13 +150,16 @@ nav {
 /**About Section**********************************************/
 
 .about-section {
+  border: 1px solid green;
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
+  height: auto;
 }
 
 .headshot-container {
-  width: 50vw;
-  height: auto;
+  width: 35vw;
+  height:fit-content;
 
   border: 1px solid #47B5FF;
   border-radius: 9px;
@@ -165,26 +168,20 @@ nav {
 .headshot-img {
   position: relative;
   max-width: 100%;
+  max-height:max-content;
 
   right: -1.2vw;
   bottom: -1.5vw;
-  
   border-radius: 9px;
 }
 
 .info-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  padding-top: 10px;
-  text-align: justify;
+  
+  padding-right: 6vw;
+  text-align:left;
   width: 40vw;
-}
-
-.contact-form {
-  border: 2px solid red;
-  height: 25vh;
 }
 
 .info-container p {
@@ -192,12 +189,47 @@ nav {
   font-family: 'Karla';
   line-height: 130%;
   font-size: 2vw;
+  font-weight: 100;
   color: white;
 }
 
 .info-container a {
   font-family: 'Karla';
+  text-decoration: none;
   line-height: 130%;
   font-size: 2vw;
+  font-weight: 300;
   color:burlywood;
 }
+
+.contact-form {
+  margin-top: 30px;
+  border: 2px solid red;
+  height: 25%;
+}
+
+/**About Section**********************************************/
+
+
+/**Experience Section**********************************************/
+
+  .experience-section {
+    border: 1px solid yellow ;
+    padding-top: 10px;
+    height: 100vh;
+  }
+  
+
+/**Experience Section**********************************************/
+
+
+/**Project Section**********************************************/
+
+.project-section {
+  border: 1px solid red ;
+  padding-top: 10px;
+  height: 100vh;
+}
+
+
+/**Project Section**********************************************/

@@ -15,9 +15,12 @@ function App() {
     <div className="App">
       
       {showLanding && <Landing handleClick={toggleLanding}/>}
-      
-      <Header navigateHome={toggleLanding}/>
-      <MainContent/>
+      {!showLanding && 
+        <div className="body">
+          <Header navigateHome={toggleLanding}/>
+          <MainContent/>
+        </div>
+      }
 
     </div>
   );

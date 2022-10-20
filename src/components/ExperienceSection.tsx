@@ -2,8 +2,8 @@ import React from "react";
 
 function ExperienceSection() {
     return(
-        <div>
-
+        <div className="experience-section">
+            
         </div>
     )
 }
