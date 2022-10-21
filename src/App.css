@@ -2,13 +2,15 @@
 
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
+
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -21,8 +23,8 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(-45deg, #47B5FF, #47B5FF, #B6E388, #47B5FF, #B6E388);
-    background-size: 400% 400%;
-    animation: gradient 13s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
 }
 
 .center-text {
@@ -39,13 +41,13 @@
   line-height: 75%;
 
   color: black;
-  text-shadow: 0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
+  text-shadow: 0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
 }
 
 .center-text h2 {
@@ -78,7 +80,7 @@
 .horizontal-button:hover {
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255, 255, 255, .25);
 }
 
 /**Landing Page******************************************************/
@@ -111,7 +113,7 @@ nav {
   display: flex;
   justify-content: center;
   align-content: center;
-  
+
   width: 100%;
   height: auto;
 }
@@ -127,8 +129,8 @@ nav {
   color: black;
 
   background: linear-gradient(-45deg, #47B5FF, #47B5FF, #B6E388, #47B5FF, #B6E388);
-    background-size: 400% 400%;
-    animation: gradient 13s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
 
   box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.75);
   border-radius: 999px;
@@ -141,7 +143,10 @@ nav {
 /**Main Content**********************************************/
 
 .main-content {
-  padding: 2.5vw 2.5vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5vw 5vw;
+  color: white;
 }
 
 /**Main Content**********************************************/
@@ -149,63 +154,51 @@ nav {
 
 /**About Section**********************************************/
 
-.about-section {
-  border: 1px solid green;
+@media only screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 2.5vw;
+  }
+
+  .about--headshot {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .headshot--image {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: 0 21%;
+    border-radius: 7px;
+  }
+
+  .about--form {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 7px;
+    padding: 3%;
+    
+    background-color: lightskyblue;
+    color: black;
+  }
+
+  .name-and-email-inputs {
+    display: flex;
+  }
+}
+
+.about {
   display: flex;
-  justify-content: space-between;
+  border: 1px solid red;
   padding-top: 10px;
-  height: auto;
-}
-
-.headshot-container {
-  width: 35vw;
-  height:fit-content;
-
-  border: 1px solid #47B5FF;
-  border-radius: 9px;
-}
-
-.headshot-img {
-  position: relative;
-  max-width: 100%;
-  max-height:max-content;
-
-  right: -1.2vw;
-  bottom: -1.5vw;
-  border-radius: 9px;
-}
-
-.info-container {
-  display: flex;
-  flex-direction: column;
-  
-  padding-right: 6vw;
-  text-align:left;
-  width: 40vw;
-}
-
-.info-container p {
-  width: 100%;
-  font-family: 'Karla';
-  line-height: 130%;
-  font-size: 2vw;
-  font-weight: 100;
-  color: white;
-}
-
-.info-container a {
-  font-family: 'Karla';
-  text-decoration: none;
-  line-height: 130%;
-  font-size: 2vw;
-  font-weight: 300;
-  color:burlywood;
-}
-
-.contact-form {
-  margin-top: 30px;
-  border: 2px solid red;
-  height: 25%;
+  height: 100vh;
 }
 
 /**About Section**********************************************/
@@ -213,12 +206,11 @@ nav {
 
 /**Experience Section**********************************************/
 
-  .experience-section {
-    border: 1px solid yellow ;
-    padding-top: 10px;
-    height: 100vh;
-  }
-  
+.experience-section {
+  border: 1px solid yellow;
+  padding-top: 10px;
+  height: 100vh;
+}
 
 /**Experience Section**********************************************/
 
@@ -226,10 +218,9 @@ nav {
 /**Project Section**********************************************/
 
 .project-section {
-  border: 1px solid red ;
+  border: 1px solid red;
   padding-top: 10px;
   height: 100vh;
 }
-
 
 /**Project Section**********************************************/

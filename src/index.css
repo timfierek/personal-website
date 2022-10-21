@@ -1,26 +1,21 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-
-  scrollbar-width: none;
-  font-family: 'Pilat Wide', 'Inter', 'Karla', sans-serif;
+  box-sizing: border-box;  
+  
+  font-family: 'Inter', 'Karla', 'Pilat Wide', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-}
-
 *::selection{
   border: 1px solid #fff;
-  background-color: rgba(255,255,255,.3);;
+  background-color: rgba(255,255,255,.3);
 }
 
 body {
-  /* background-color: #28272c; */
-  background-color: black;
+  background-color: #1c1c1e;
+  overflow: overlay;
 }
 
 button {
@@ -32,3 +27,29 @@ button {
 	cursor: pointer;
 	outline: inherit;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 3px solid transparent;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  *::-webkit-scrollbar-corner {
+
+  }
