@@ -38,13 +38,13 @@ function AboutSection() {
                 </p>
                 <br />
                 <p>
-                    I'd love it if you connected with me on <a href="https://www.linkedin.com/in/tim-fierek/">LinkedIn</a> or
-                    if you sent me an email using the form below.
+                    I'd love it if you'd connect with me on <a href="https://www.linkedin.com/in/tim-fierek/">LinkedIn</a> or
+                    if you send me an email using the form below.
                 </p>
             </div>
             <form action="" className="about--form">
+                <h1>Connect with me!</h1>
                 <div className="name-and-email-inputs">
-                    <label htmlFor="name">Name</label>
                     <input
                         onChange={updateForm}
                         value={formData.name}
@@ -53,8 +53,6 @@ function AboutSection() {
                         name="name"
                         id="name"
                     />
-
-                    <label htmlFor="email">Email</label><br />
                     <input
                         onChange={updateForm}
                         value={formData.email}
@@ -62,19 +60,19 @@ function AboutSection() {
                         placeholder="Email"
                         name="email"
                         id="email"
+                        required
                     />
                 </div>
 
-                <label htmlFor="message">Message</label>
                 <textarea
                     onChange={updateForm}
                     value={formData.message}
                     placeholder="Write your message here..."
                     name="message"
                     id="message"
+                    required
                 />
-
-                <input type="submit" value="Send" onClick={sendForm} />
+                <input className="submit" type="submit" onClick={sendForm} />
             </form>
         </div>
     )

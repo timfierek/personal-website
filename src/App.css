@@ -72,7 +72,7 @@
   border: 1px solid black;
   border-radius: 999px;
 
-  width: 400px;
+  width: 300px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -146,7 +146,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 2.5vw 5vw;
-  color: white;
+  color: #e9e9ea;
 }
 
 /**Main Content**********************************************/
@@ -158,9 +158,8 @@ nav {
   .about {
     flex-direction: column;
     align-items: center;
+    gap: 5%;
     justify-content: space-between;
-
-    padding: 0 2.5vw;
   }
 
   .about--headshot {
@@ -177,28 +176,108 @@ nav {
   }
 
   .about--form {
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+
+    border: 1px solid black;
     border-radius: 7px;
-    padding: 3%;
+    padding: 3vw 10vw;
     
-    background-color: lightskyblue;
+    box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.75);
+    background-color: black;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.2);
+
+  }
+
+  .name-and-email-inputs {    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #name, #email, #message {
+    width: 100%;
+    padding: 2%;
+    margin: 4% 0 0 0;
+    color: #e9e9ea;
+
+    background-color: transparent;
+    border: none; 
+    border-bottom: 1px solid #e9e9ea;
+  }
+
+  #message {
+    height: 30%;
+
+    border-radius: 5px;
+    border: 1px solid #e9e9ea;
+    resize: none;
+  }
+
+  #name:focus, #email:focus, #message:focus {
+    background-color: #2c2c2c;
+    outline: none;
+    border-radius: 5px;
+    border-color: #47B5FF;
+  }
+
+  .submit {
+    width: 100%;
+    height: 20%;
+
+    margin-top: 4%;
+    border: 1px solid #e9e9ea;
+    letter-spacing: .5vw;
+    font-family: 'Pilat Wide';
+    color: #e9e9ea;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.25s linear;
+  }
+
+  .submit:active, .submit:focus, .submit:hover {
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+    background: linear-gradient(-45deg, #47B5FF, #47B5FF, #B6E388, #47B5FF, #B6E388);
+    background-size: 400% 400%;
+    animation: gradient 13s ease infinite;
+
+    border: 1px solid black;
     color: black;
   }
 
-  .name-and-email-inputs {
-    display: flex;
+  .submit:hover {
+    cursor: pointer;
   }
+
+  .about h1 {
+    font-weight: 500;
+    font-family: 'Pilat Wide';
+  }
+
+  .about--text {
+    margin: 5% 0;
+    font-size: 1em;
+    font-family: 'Poppins';
+    line-height: 140%;
+  }
+
+  .about a {
+    color: #47B5FF;
+    text-decoration: none;
+  }
+
 }
 
 .about {
   display: flex;
   border: 1px solid red;
-  padding-top: 10px;
-  height: 100vh;
+  margin-top: 15%;
+  padding: 2.5vh 2.5vw;
+  /* height: 100vh; */
+  height: auto;
 }
 
 /**About Section**********************************************/
@@ -206,9 +285,106 @@ nav {
 
 /**Experience Section**********************************************/
 
+@media only screen and (max-width: 768px) {
+  .experience-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .experience-section h1 {
+    font-weight: 700;
+    font-size: 3em;
+    font-family: 'Pilat Wide';
+  }
+
+  .job-title, .edu-title {
+    padding-top: 1.5vh;
+    font-family: 'Karla';
+    font-size: 1.2em;
+  }
+
+  .job-duration, .edu-subtitle, .edu-duration {
+    padding-top: 0.5vh;
+    font-family: 'Karla';
+    font-weight: 300;
+    font-size: 1em;
+  }
+
+  .edu-duration {
+    padding: 0;
+  }
+
+  .edu-bullets, .job-bullets {
+    padding-top: 1vh;
+    padding: 1vh 5% 0;
+  }
+
+  .edu-bullets li, .job-bullets li {
+    font-family: 'Karla';
+    font-size: 0.9em;
+  }
+
+  li::marker {
+    color: #47B5FF;
+  }
+
+  .skills h4 {
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    font-family: 'Karla';
+    font-size: 1.2em;
+  }
+
+  .skills ul {
+    list-style-type: none;
+  }
+
+  .skills li {
+    border: 1px solid white;    
+    margin-right: 1%;
+    margin-bottom: 1%;
+    padding: 0.5% 0.75%;
+    border-radius: 5px;
+    display: inline-block;
+
+    font-family: 'Karla';
+    font-size: 0.9em;
+
+    box-shadow: 0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+  }
+
+  .skills--backend li {
+    border-color: #47B5FF;
+    color: #47B5FF;
+  }
+
+  .skills--frontend li {
+    border-color: #50C878;
+    color: #50C878;
+  }
+
+  .skills--databaseServer li {
+    border-color: yellow;
+    color: yellow;
+  }
+
+  .skills--software li {
+    border-color: coral;
+    color: coral;
+  }
+}
+
 .experience-section {
   border: 1px solid yellow;
-  padding-top: 10px;
+  margin-top: 15%;
+  padding: 2.5vh 2.5vw;
   height: 100vh;
 }
 
@@ -219,7 +395,8 @@ nav {
 
 .project-section {
   border: 1px solid red;
-  padding-top: 10px;
+  margin-top: 15%;
+  padding: 2.5vh 2.5vw;
   height: 100vh;
 }
 
