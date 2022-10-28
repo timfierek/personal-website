@@ -276,7 +276,6 @@ nav {
   border: 1px solid red;
   margin-top: 15%;
   padding: 2.5vh 2.5vw;
-  /* height: 100vh; */
   height: auto;
 }
 
@@ -322,11 +321,15 @@ nav {
 
   .edu-bullets li, .job-bullets li {
     font-family: 'Karla';
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   li::marker {
     color: #47B5FF;
+  }
+
+  .skills {
+    padding-top: 10px;
   }
 
   .skills h4 {
@@ -349,7 +352,7 @@ nav {
     display: inline-block;
 
     font-family: 'Karla';
-    font-size: 0.9em;
+    font-size: 1em;
 
     box-shadow: 0 6px 1px rgba(0, 0, 0, .1),
     0 0 5px rgba(0, 0, 0, .1),
@@ -384,8 +387,8 @@ nav {
 .experience-section {
   border: 1px solid yellow;
   margin-top: 15%;
-  padding: 2.5vh 2.5vw;
-  height: 100vh;
+  padding: 2vh 2.5vw;
+  min-height: 100vh;
 }
 
 /**Experience Section**********************************************/
@@ -393,10 +396,20 @@ nav {
 
 /**Project Section**********************************************/
 
+@media only screen and (max-width: 768px) {
+  .project-section h1 {
+    font-weight: 700;
+    font-size: 3em;
+    font-family: 'Pilat Wide';
+  }
+
+  
+}
+
 .project-section {
   border: 1px solid red;
   margin-top: 15%;
-  padding: 2.5vh 2.5vw;
+  padding: 2vh 2.5vw;
   height: 100vh;
 }
 
