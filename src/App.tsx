@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Landing from './components/Landing';
-import Header from './components/Header';
 import MainContent from './components/MainContent';
 
 function App() {
@@ -13,12 +12,11 @@ function App() {
 
   return (
     <div className="App">
-      
       {showLanding && <Landing handleClick={toggleLanding}/>}
+      
       {!showLanding && 
         <div className="body">
-          <Header navigateHome={toggleLanding}/>
-          <MainContent/>
+          <MainContent navigateHome={toggleLanding}/>
         </div>
       }
 

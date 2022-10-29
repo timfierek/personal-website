@@ -19,7 +19,7 @@ function ProjectSection() {
 
     return (
         <div className="project-section">
-            <h1>Projects</h1>
+            <h1 className="sectionHeader">Projects</h1>
             {projElements}
         </div>
     )

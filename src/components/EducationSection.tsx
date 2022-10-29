@@ -4,7 +4,7 @@ function EducationSection() {
     return(
         <div className="education-section">
             <div className="education">
-                <h1>Education</h1>
+                <h1 className="sectionHeader">Education</h1>
                 <h3 className="edu-title">Java Software Engineering Bootcamp</h3>
                 <h4 className="edu-subtitle">Grand Circus | Detroit, MI | 4.0 GPA</h4>
                 <h5 className="edu-duration">March 2022 - September 2022</h5>

@@ -14,9 +14,11 @@
 }
 
 body {
-  background-color: #0d131a;
-  /* background: radial-gradient(ellipse at bottom, #0f151d 0%, #090A0F 100%); */
+  background-color: #1e1e1e;
   overflow: overlay;
+  box-shadow:
+		inset 10px 0px 10px -7px rgba(19, 19, 19, 0.5),
+		inset -10px 0px 10px -7px rgba(19, 19, 19, 0.5);
 }
 
 button {

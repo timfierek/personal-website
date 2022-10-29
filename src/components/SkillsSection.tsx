@@ -4,7 +4,7 @@ function SkillsSection() {
     return (
         <div className="skills-section">
             <div className="skills">
-                <h1>Skills</h1>
+                <h1 className="sectionHeader">Skills</h1>
                 <div className="skills--backend">
                     <h4>Back End</h4>
                     <ul>

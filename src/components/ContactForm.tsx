@@ -1,9 +1,11 @@
 import React from "react";
+import { send } from '@emailjs/browser';
+import { useState } from 'react';
 
 function ContactForm() {
-    const [formData, setFormData] = React.useState({ name: "", email: "", message: "" })
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
-    function updateForm(event: any) {
+    function handleChange(event: any) {
         const { name, value } = event.target;
 
         setFormData(prevFormData => ({
@@ -12,8 +14,24 @@ function ContactForm() {
         }))
     }
 
-    function sendForm() {
-        "EmailJS maybe?"
+    const submitForm = (event: any) => {
+        event.preventDefault();
+        send(
+            'service_nw1uu8r',
+            'template_6e9kg9a',
+            {
+                from_name: formData.name,
+                reply_to: formData.email,
+                message: formData.message
+            },
+            'Y84SH955KJf5FOUPO'
+        )
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        })
+        .catch((err) => {
+            console.log('FAILED...', err);
+        });
     }
 
     return(
@@ -22,7 +40,7 @@ function ContactForm() {
                 <h1>Connect with me!</h1>
                 <div className="name-and-email-inputs">
                     <input
-                        onChange={updateForm}
+                        onChange={handleChange}
                         value={formData.name}
                         type="text"
                         placeholder="Name"
@@ -30,7 +48,7 @@ function ContactForm() {
                         id="name"
                     />
                     <input
-                        onChange={updateForm}
+                        onChange={handleChange}
                         value={formData.email}
                         type="email"
                         placeholder="Email"
@@ -41,14 +59,14 @@ function ContactForm() {
                 </div>
 
                 <textarea
-                    onChange={updateForm}
+                    onChange={handleChange}
                     value={formData.message}
                     placeholder="Write your message here..."
                     name="message"
                     id="message"
                     required
                 />
-                <input className="submit" type="submit" onClick={sendForm} />
+                <input className="submit" type="submit" onClick={submitForm}/>
             </form>
         </div>
     )

@@ -5,9 +5,9 @@ function Header(props: any) {
         <nav>
             <div className="nav-buttons">
                 <button onClick={props.navigateHome}>Home</button>
-                <button>About Me</button>
-                <button>Experience</button>
-                <button>Projects</button>
+                <button onClick={() => props.scrollTo(props.aboutRef)}>About Me</button>
+                <button onClick={() => props.scrollTo(props.experienceRef)}>Experience</button>
+                <button onClick={() => props.scrollTo(props.projectsRef)}>Projects</button>
             </div>
         </nav>
     )
