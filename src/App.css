@@ -339,11 +339,11 @@ nav {
     font-size: 1.2em;
   }
 
-  .skills ul {
+  .skills ul, .details ul {
     list-style-type: none;
   }
 
-  .skills li {
+  .skills li, .details li {
     border: 1px solid white;    
     margin-right: 1%;
     margin-bottom: 1%;
@@ -354,6 +354,7 @@ nav {
     font-family: 'Karla';
     font-size: 1em;
 
+    border-color: #47B5FF;
     box-shadow: 0 6px 1px rgba(0, 0, 0, .1),
     0 0 5px rgba(0, 0, 0, .1),
     0 1px 3px rgba(0, 0, 0, .3),
@@ -394,15 +395,21 @@ nav {
 /**Experience Section**********************************************/
 
 
-/**Project Section**********************************************/
+/**Projects Section**********************************************/
 
 @media only screen and (max-width: 768px) {
   .project-section h1 {
+    margin-bottom: 40px;
     font-weight: 700;
     font-size: 3em;
     font-family: 'Pilat Wide';
   }
 
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
   
 }
 
@@ -410,7 +417,87 @@ nav {
   border: 1px solid red;
   margin-top: 15%;
   padding: 2vh 2.5vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-/**Project Section**********************************************/
+/**Projects Section**********************************************/
+
+/**Individual Project**********************************************/
+
+@media only screen and (max-width: 768px) {
+  .img-container {
+    width: 100%;
+  }
+
+  .img-container img {
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .project {
+    padding-bottom: 25%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .base-info {
+    margin-top: 1vh;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .base-info h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+
+  .base-info a i {
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .base-info button {
+    margin-top: 5px;
+    padding: 5px 5px;
+    justify-self:end;
+
+    color: rgba(255, 255, 255, .65);
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+
+    letter-spacing: .2vw;
+    font-family: 'Pilat Wide';
+    font-weight: 300;
+  }
+
+  .base-info button i {
+    margin-left: 5px;
+  }
+
+  .details {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    padding: 2vh 0;
+
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 120%;
+  }
+
+  .list-title {
+    padding: 2vh 0 10px;
+  }
+
+  
+}
+
+/**Individual Project**********************************************/
