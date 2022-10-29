@@ -4,24 +4,10 @@ import headshot2 from '../images/pfp2.jpg';
 
 function AboutSection() {
     const [pfp, setPfp] = React.useState(headshot1);
-    const [formData, setFormData] = React.useState({ name: "", email: "", message: "" })
 
     function flipPfp() {
         if (pfp === headshot1) setPfp(headshot2);
         else setPfp(headshot1)
-    }
-
-    function updateForm(event: any) {
-        const { name, value } = event.target;
-
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            [name]: value
-        }))
-    }
-
-    function sendForm() {
-        "EmailJS maybe?"
     }
 
     return (
@@ -39,41 +25,9 @@ function AboutSection() {
                 <br />
                 <p>
                     I'd love it if you'd connect with me on <a href="https://www.linkedin.com/in/tim-fierek/">LinkedIn</a> or
-                    if you send me an email using the form below.
+                    if you'd send me an email using the form below.
                 </p>
             </div>
-            <form action="" className="about--form">
-                <h1>Connect with me!</h1>
-                <div className="name-and-email-inputs">
-                    <input
-                        onChange={updateForm}
-                        value={formData.name}
-                        type="text"
-                        placeholder="Name"
-                        name="name"
-                        id="name"
-                    />
-                    <input
-                        onChange={updateForm}
-                        value={formData.email}
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                        id="email"
-                        required
-                    />
-                </div>
-
-                <textarea
-                    onChange={updateForm}
-                    value={formData.message}
-                    placeholder="Write your message here..."
-                    name="message"
-                    id="message"
-                    required
-                />
-                <input className="submit" type="submit" onClick={sendForm} />
-            </form>
         </div>
     )
 }
