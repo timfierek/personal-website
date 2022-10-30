@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing(props: any) {
     return (
-        <div className="landing">
+        <div className="landing animate__animated animate__slideInUp">
             <div className="icons">
                 <a href="https://www.linkedin.com/in/tim-fierek/">
                     <i className="fa-brands fa-linkedin-in" />
@@ -19,8 +19,8 @@ function Landing(props: any) {
             </div>
 
             <button className="horizontal-button" onClick={props.handleClick}>
+                <i className="fa-solid fa-angle-up"></i>
                 <p>Who am I?</p>
-                <i className="fa-solid fa-caret-down" />
             </button>
         </div>
     )

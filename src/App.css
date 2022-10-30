@@ -6,7 +6,7 @@
   color: #e9e9ea;
 }
 
-.sectionHeader {
+.sectionHeader, .submitted h1 {
   font-weight: 700;
   font-size: 3em;
   font-family: 'Pilat Wide';
@@ -301,6 +301,24 @@ nav {
 
 .submit:hover {
   cursor: pointer;
+}
+
+.submitted {
+  justify-content: center;
+  text-align: center;
+  font-size: 0.5em;
+  color: black;
+
+  border-radius: 4px;
+  background: linear-gradient(-45deg, #47B5FF, #47B5FF, #B6E388, #47B5FF, #B6E388);
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
+  
+  width: 100%;
+}
+
+.contact-form {
+  padding: 1.5vh 2.5vw 1.5vh;
 }
 
 /* Contact form */

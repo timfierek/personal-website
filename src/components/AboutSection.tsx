@@ -1,8 +1,8 @@
 import React from "react";
-import headshot1 from '../images/pfp1.jpg';
-import headshot2 from '../images/pfp2.jpg';
 
 function AboutSection() {
+    const headshot1 = '/images/pfp1.jpg';
+    const headshot2 = '/images/pfp2.jpg';
     const [pfp, setPfp] = React.useState(headshot1);
 
     function flipPfp() {

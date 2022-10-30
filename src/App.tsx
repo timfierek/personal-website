@@ -4,7 +4,7 @@ import Landing from './components/Landing';
 import MainContent from './components/MainContent';
 
 function App() {
-  const [showLanding, setShowLanding] = React.useState(true);
+  const [showLanding, setShowLanding] = React.useState(false);
 
   function toggleLanding() {
     setShowLanding(prevVal => (!prevVal))

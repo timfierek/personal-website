@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 function ContactForm() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+    const [submitted, setSubmitted] = useState(false)
 
     function handleChange(event: any) {
         const { name, value } = event.target;
@@ -15,6 +16,7 @@ function ContactForm() {
     }
 
     const submitForm = (event: any) => {
+        setSubmitted(true);
         event.preventDefault();
         send(
             'service_nw1uu8r',
@@ -26,48 +28,52 @@ function ContactForm() {
             },
             'Y84SH955KJf5FOUPO'
         )
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        })
-        .catch((err) => {
-            console.log('FAILED...', err);
-        });
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+                console.log('FAILED...', err);
+            });
     }
 
-    return(
+    return (
         <div className="contact-form">
-            <form action="" className="about--form">
-                <h1>Connect with me!</h1>
-                <div className="name-and-email-inputs">
-                    <input
+            {!submitted ?
+                <form action="" className="about--form">
+                    <h1>Connect with me!</h1>
+                    <div className="name-and-email-inputs">
+                        <input
+                            onChange={handleChange}
+                            value={formData.name}
+                            type="text"
+                            placeholder="Name"
+                            name="name"
+                            id="name"
+                        />
+                        <input
+                            onChange={handleChange}
+                            value={formData.email}
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            id="email"
+                            required
+                        />
+                    </div>
+
+                    <textarea
                         onChange={handleChange}
-                        value={formData.name}
-                        type="text"
-                        placeholder="Name"
-                        name="name"
-                        id="name"
-                    />
-                    <input
-                        onChange={handleChange}
-                        value={formData.email}
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                        id="email"
+                        value={formData.message}
+                        placeholder="Write your message here..."
+                        name="message"
+                        id="message"
                         required
                     />
-                </div>
-
-                <textarea
-                    onChange={handleChange}
-                    value={formData.message}
-                    placeholder="Write your message here..."
-                    name="message"
-                    id="message"
-                    required
-                />
-                <input className="submit" type="submit" onClick={submitForm}/>
-            </form>
+                    <input className="submit" type="submit" onClick={submitForm} />
+                </form>
+                : <div className="submitted">
+                    <h1>Email Sent Successfully!</h1>
+                </div>}
         </div>
     )
 }
