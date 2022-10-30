@@ -1,14 +1,31 @@
 import React from "react";
 
 function Header(props: any) {
+    const [showMenu, setShowMenu] = React.useState(true)
+    
+    function handleClick() {
+        setShowMenu(prev => (!prev))
+    }
+
     return (
-        <nav>
+        <nav style={{backgroundColor: showMenu ? 'rgba(0, 0, 0, .75)' : 'rgba(0, 0, 0, .0)'}}>
             <div className="nav-buttons">
-                <button onClick={props.navigateHome}><i className="fa-solid fa-angle-down"></i></button>
-                <button onClick={() => props.scrollTo(props.aboutRef)}>About Me</button>
-                <button onClick={() => props.scrollTo(props.experienceRef)}>Experience</button>
-                <button onClick={() => props.scrollTo(props.projectsRef)}>Projects</button>
+                <button onClick={handleClick}>
+                    <i className={showMenu ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"}/>
+                </button>
             </div>
+            <ul className={`menu`} style={{display: showMenu ? 'inline' : 'none'}}>
+                <li><button onClick={props.navigateHome}>Home</button></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            
+            {/* <div className="nav-text">
+                <h4>Tim Fierek</h4>
+                <h4>timothy.fierek@gmail.com</h4>
+            </div> */}
         </nav>
     )
 }

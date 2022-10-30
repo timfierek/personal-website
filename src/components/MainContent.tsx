@@ -8,37 +8,22 @@ import SkillsSection from "./SkillsSection";
 import Header from "./Header";
 
 function MainContent(props: any) {
-    const aboutRef = React.useRef(null);
-    const experienceRef = React.useRef(null);
-    const projectsRef = React.useRef(null);
-
-    function scrollTo(ref : any) {
-        window.scrollTo({
-            top: ref.current.offsetTop,
-            behavior: 'smooth'
-        });
-    }
-
-    return(
+    return (
         <div className="main-content">
-            <Header 
-                navigateHome={props.navigateHome} 
-                scrollTo={scrollTo}
-                aboutRef={aboutRef}
-                experienceRef={experienceRef}
-                projectsRef={projectsRef}
-            />
-            <div ref={aboutRef}>
+            <Header navigateHome={props.navigateHome} />
+            <div id="about">
                 <AboutSection />
             </div>
-            <ContactForm />
-            <div ref={experienceRef}>
+            <div id="contact">
+                <ContactForm />
+            </div>
+            <div id="experience">
                 <ExperienceSection />
             </div>
             <SkillsSection />
             <EducationSection />
-            <div ref={projectsRef}> 
-                <ProjectSection /> 
+            <div id="projects">
+                <ProjectSection />
             </div>
         </div>
     )

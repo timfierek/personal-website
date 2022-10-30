@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing(props: any) {
     return (
-        <div className="landing animate__animated animate__slideInUp">
+        <div className="landing">
             <div className="icons">
                 <a href="https://www.linkedin.com/in/tim-fierek/">
                     <i className="fa-brands fa-linkedin-in" />

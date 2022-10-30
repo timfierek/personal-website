@@ -4,24 +4,23 @@ import Landing from './components/Landing';
 import MainContent from './components/MainContent';
 
 function App() {
-  const [showLanding, setShowLanding] = React.useState(false);
+  const [displayLanding, setDisplayLanding] = React.useState(true)
 
-  function toggleLanding() {
-    setShowLanding(prevVal => (!prevVal))
+  const showHideLanding = () => {
+    setDisplayLanding(prevVal => (!prevVal))
   }
 
   return (
     <div className="App">
-      {showLanding && <Landing handleClick={toggleLanding}/>}
-      
-      {!showLanding && 
-        <div className="body">
-          <MainContent navigateHome={toggleLanding}/>
-        </div>
+      {displayLanding &&
+        <Landing handleClick={showHideLanding} />
       }
 
+      {!displayLanding &&
+        <MainContent navigateHome={showHideLanding} />
+      }
     </div>
-  );
+  )
 }
 
 export default App;

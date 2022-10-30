@@ -17,7 +17,7 @@ function AboutSection() {
             </div>
             <div className="about--text">
                 <p>Welcome to my site, <br /><br />I'm Tim Fierek, a Software Engineer based in Michigan, USA.
-                    My favorite place to work is on the backend; I have multiple years of experience with Java,
+                    My favorite place to work on the stack is the backend; I have multiple years of experience with Java,
                     and am well versed in Spring, MongoDB, SQL, and AWS. I'm extremely interested in fintech and
                     decentralized applications. I enjoy constantly learning new technologies and right now I'm
                     having a blast learning ReactJS.

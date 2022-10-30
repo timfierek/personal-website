@@ -111,7 +111,7 @@
   margin-bottom: 20px;
 }
 
-.horizontal-button:hover {
+.horizontal-button:hover, .menu li:hover{
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
   background-color: rgba(255, 255, 255, .25);
@@ -152,19 +152,17 @@ nav {
 
   background-color: rgba(0, 0, 0, .6);
   
+  padding: 0 2vw;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
 }
 
 .nav-buttons button {
   margin: 10px 0.2vw;
-  width: 18vw;
+  width: 5vh;
   height: 5vh;
 
-  font-family: 'Inter';
-  font-weight: 500;
-  font-size: 0.7em;
+  font-size: 1.5em;
   color: black;
 
   background: linear-gradient(-45deg, #47B5FF, #47B5FF, #B6E388, #47B5FF, #B6E388);
@@ -174,6 +172,79 @@ nav {
   box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.75);
   border-radius: 999px;
   border: 1px solid black;
+}
+
+/* Couldn't get animations to work ughh */
+/* https://github.com/animate-css */
+/* .menu-in {
+  animation: testIn;
+  animation-duration: .5s;
+  transition: all 0.5s ease-out;
+}
+
+.menu-out {
+  animation: test;
+  animation-duration: .5s; 
+  transition: all 0.5s ease-out;
+}
+
+@keyframes testOut {
+  0% { transform: translate3d(0, 0, 0); }
+  99.999% { visibility: hidden; }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+@keyframes testIn {
+  99.999% { visibility: hidden; }
+  0% { transform: translate3d(-100%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes slideInLeft {
+  from {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+} */
+
+.menu li a, .menu li button{
+  display: flex;
+  align-items: center;
+
+  color: #e9e9ea;
+  text-decoration: none;
+  align-self: center;
+  font-size: 0.85em;
+  
+  height: 100%;
+}
+
+.menu li {
+  display: inline-block;
+  height: 5vh;
+  padding: 0 6px;
+  margin: 10px 0vw;
+  
+  border-right: 1px solid rgba(255, 255, 255, .6);
+}
+
+.menu li:nth-child(1) {
+  border-left: 1px solid rgba(255, 255, 255, .6);
 }
 
 /**Nav bar**********************************************/
