@@ -21,11 +21,6 @@ function Header(props: any) {
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
-            
-            {/* <div className="nav-text">
-                <h4>Tim Fierek</h4>
-                <h4>timothy.fierek@gmail.com</h4>
-            </div> */}
         </nav>
     )
 }

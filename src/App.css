@@ -1,36 +1,70 @@
 /* per-card styles */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  padding: 2.5vh 5vw 2.5vh;
-  color: #e9e9ea;
+@media only screen and (max-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5vh 5vw 2.5vh;
+    color: #e9e9ea;
+  }
 }
 
-.sectionHeader, .submitted h1 {
+@media only screen and (min-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5vh 20vw 2.5vh;
+    color: #e9e9ea;
+  }
+}
+
+.sectionHeader,
+.submitted h1 {
   font-weight: 700;
   font-size: 3em;
   font-family: 'Pilat Wide';
 }
 
-@media only screen and (max-width: 768px) {
+.about,
+.experience-section,
+.education-section,
+.project-section,
+.skills-section,
+.contact-form {
+  border-radius: 4px;
+  background-color: rgb(20, 20, 20);
+  margin-top: 15%;
+  filter: drop-shadow(1px 2px 8px var(--shadow-color));
+  --shadow-color: rgb(0, 0, 0);
+}
+
+@media only screen and (min-width: 768px) {
+
   .about,
   .experience-section,
   .education-section,
   .project-section,
   .skills-section,
   .contact-form {
-    border-radius: 4px;
-    background-color: rgb(20, 20, 20);
-    margin-top: 15%;
-    padding: 1.5vh 2.5vw 3vh;
-    filter: drop-shadow(
-      1px 2px 8px var(--shadow-color)
-    );
-    --shadow-color: rgb(0, 0, 0);
+    margin-top: 5%;
+    padding: 1.5vh 1vw 1vh;
+  }
+
+  .education-section {
+    padding: 1.5vh 1vw 3vh;
   }
 }
 
+@media only screen and (max-width: 768px) {
 
+  .about,
+  .experience-section,
+  .education-section,
+  .project-section,
+  .skills-section,
+  .contact-form {
+    padding: 1.5vh 2.5vw 3vh;
+  }
+}
 
 /**Landing Page******************************************************/
 
@@ -111,7 +145,8 @@
   margin-bottom: 20px;
 }
 
-.horizontal-button:hover, .menu li:hover{
+.horizontal-button:hover,
+.menu li:hover {
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
   background-color: rgba(255, 255, 255, .25);
@@ -151,7 +186,7 @@ nav {
   top: 0;
 
   background-color: rgba(0, 0, 0, .6);
-  
+
   padding: 0 2vw;
   display: flex;
   justify-content: space-between;
@@ -174,55 +209,8 @@ nav {
   border: 1px solid black;
 }
 
-/* Couldn't get animations to work ughh */
-/* https://github.com/animate-css */
-/* .menu-in {
-  animation: testIn;
-  animation-duration: .5s;
-  transition: all 0.5s ease-out;
-}
-
-.menu-out {
-  animation: test;
-  animation-duration: .5s; 
-  transition: all 0.5s ease-out;
-}
-
-@keyframes testOut {
-  0% { transform: translate3d(0, 0, 0); }
-  99.999% { visibility: hidden; }
-  100% { transform: translate3d(-100%, 0, 0); }
-}
-
-@keyframes testIn {
-  99.999% { visibility: hidden; }
-  0% { transform: translate3d(-100%, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-
-@keyframes slideInLeft {
-  from {
-    visibility: hidden;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideOutLeft {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(-100%, 0, 0);
-  }
-} */
-
-.menu li a, .menu li button{
+.menu li a,
+.menu li button {
   display: flex;
   align-items: center;
 
@@ -230,7 +218,7 @@ nav {
   text-decoration: none;
   align-self: center;
   font-size: 0.85em;
-  
+
   height: 100%;
 }
 
@@ -239,12 +227,25 @@ nav {
   height: 5vh;
   padding: 0 6px;
   margin: 10px 0vw;
-  
+
   border-right: 1px solid rgba(255, 255, 255, .6);
 }
 
 .menu li:nth-child(1) {
   border-left: 1px solid rgba(255, 255, 255, .6);
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    margin-left: -20vw;
+  }
+
+  .menu li a,
+  .menu li button {
+    justify-content: center;
+    width: 6vw;
+    min-width: fit-content;
+  }
 }
 
 /**Nav bar**********************************************/
@@ -253,13 +254,6 @@ nav {
 /**About Section**********************************************/
 
 @media only screen and (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-    gap: 5%;
-    justify-content: space-between;
-  }
-
   .about--headshot {
     width: 100%;
     height: 30vh;
@@ -290,7 +284,46 @@ nav {
     color: #47B5FF;
     text-decoration: none;
   }
+}
 
+@media only screen and (min-width: 768px) {
+  .about {
+    display: flex;
+    min-height: 100%;
+  }
+
+  .about--headshot {
+    width: 50%;
+    height: 50vh;
+  }
+
+  .headshot--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 21%;
+    border-radius: 7px;
+  }
+
+  .about--text {
+    width: 50%;
+    margin: 1% 0;
+    padding: 0 4%;
+
+    font-size: 1em;
+    font-family: 'Poppins';
+    line-height: 140%;
+  }
+
+  .about a {
+    color: #47B5FF;
+    text-decoration: none;
+  }
+
+  .about--form h1 {
+    font-weight: 500;
+    font-family: 'Pilat Wide';
+  }
 }
 
 /**About Section**********************************************/
@@ -384,7 +417,7 @@ nav {
   background: linear-gradient(-45deg, #47B5FF, #47B5FF, #B6E388, #47B5FF, #B6E388);
   background-size: 400% 400%;
   animation: gradient 13s ease infinite;
-  
+
   width: 100%;
 }
 
@@ -392,53 +425,111 @@ nav {
   padding: 1.5vh 2.5vw 1.5vh;
 }
 
+@media only screen and (min-width: 768px) {
+  .about--form {
+    min-height: 50vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 3vw 0vw;
+  }
+
+  .name-and-email-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #name,
+  #email,
+  #message {
+    width: 100%;
+    padding: 2%;
+    margin: 4% 0 0 0;
+    color: #e9e9ea;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e9e9ea;
+  }
+
+  #message {
+    min-height: 200px;
+    height: 30%;
+
+    border-radius: 5px;
+    border: 1px solid #e9e9ea;
+    resize: none;
+  }
+
+  .submit {
+    width: 100%;
+    height: 15%;
+    min-height: 50px;
+
+    margin-top: 4%;
+    border: 1px solid #e9e9ea;
+    letter-spacing: .5vw;
+    font-family: 'Pilat Wide';
+    color: #e9e9ea;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.25s linear;
+  }
+
+  .contact-form {
+    padding: 1.5vh 8vw .5vh;
+  }
+}
+
 /* Contact form */
 
 
 /**Experience Section**********************************************/
 
-@media only screen and (max-width: 768px) {
-  .experience-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .job-title,
-  .edu-title {
-    padding-top: 1.5vh;
-    font-family: 'Karla';
-    font-size: 1.2em;
-  }
+.job-title,
+.edu-title {
+  padding-top: 1.5vh;
+  font-family: 'Karla';
+  font-size: 1.2em;
+}
 
-  .job-duration,
-  .edu-subtitle,
-  .edu-duration {
-    padding-top: 0.5vh;
-    font-family: 'Karla';
-    font-weight: 300;
-    font-size: 1em;
-  }
+.job-duration,
+.edu-subtitle,
+.edu-duration {
+  padding-top: 0.5vh;
+  font-family: 'Karla';
+  font-weight: 300;
+  font-size: 1em;
+}
 
-  .edu-duration {
-    padding: 0;
-  }
+.edu-duration {
+  padding: 0;
+}
 
-  .edu-bullets,
-  .job-bullets {
-    padding-top: 1vh;
-    padding: 1vh 5% 0;
-  }
+.edu-bullets,
+.job-bullets {
+  padding-top: 1vh;
+  padding: 1vh 5% 0;
+}
 
-  .edu-bullets li,
-  .job-bullets li {
-    font-family: 'Karla';
-    font-size: 1em;
-  }
+.edu-bullets li,
+.job-bullets li {
+  font-family: 'Karla';
+  font-size: 1em;
+}
 
-  li::marker {
-    color: #47B5FF;
-  }
+li::marker {
+  color: #47B5FF;
 }
 
 /**Experience Section**********************************************/
@@ -446,156 +537,197 @@ nav {
 
 /**Skills Section**********************************************/
 
-@media only screen and (max-width: 768px) {
-  .skills h4 {
-    padding-top: 1vh;
-    padding-bottom: 0.5vh;
-    font-family: 'Karla';
-    font-size: 1.2em;
-  }
-
-  .skills ul,
-  .details ul {
-    list-style-type: none;
-  }
-
-  .skills li,
-  .details li {
-    border: 1px solid white;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    padding: 0.5% 0.75%;
-    border-radius: 5px;
-    display: inline-block;
-
-    font-family: 'Karla';
-    font-size: 1em;
-
-    border-color: #47B5FF;
-    box-shadow: 0 6px 1px rgba(0, 0, 0, .1),
-      0 0 5px rgba(0, 0, 0, .1),
-      0 1px 3px rgba(0, 0, 0, .3),
-      0 3px 5px rgba(0, 0, 0, .2),
-      0 5px 10px rgba(0, 0, 0, .25),
-      0 10px 10px rgba(0, 0, 0, .2),
-      0 20px 20px rgba(0, 0, 0, .15);
-  }
-
-  .skills--backend li {
-    border-color: #47B5FF;
-    color: #47B5FF;
-  }
-
-  .skills--frontend li {
-    border-color: #50C878;
-    color: #50C878;
-  }
-
-  .skills--databaseServer li {
-    border-color: yellow;
-    color: yellow;
-  }
-
-  .skills--software li {
-    border-color: coral;
-    color: coral;
-  }
+.skills h4 {
+  padding-top: 1vh;
+  padding-bottom: 0.5vh;
+  font-family: 'Karla';
+  font-size: 1.2em;
 }
+
+.skills ul,
+.details ul {
+  list-style-type: none;
+}
+
+.skills li,
+.details li {
+  border: 1px solid white;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  padding: 0.5% 0.75%;
+  border-radius: 5px;
+  display: inline-block;
+
+  font-family: 'Karla';
+  font-size: 1em;
+
+  border-color: #47B5FF;
+  box-shadow: 0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.skills--backend li {
+  border-color: #47B5FF;
+  color: #47B5FF;
+}
+
+.skills--frontend li {
+  border-color: #50C878;
+  color: #50C878;
+}
+
+.skills--databaseServer li {
+  border-color: yellow;
+  color: yellow;
+}
+
+.skills--software li {
+  border-color: coral;
+  color: coral;
+}
+
 
 /**Skills Section**********************************************/
 
 
 /**Projects Section**********************************************/
 
-@media only screen and (max-width: 768px) {
-  .project-section h1 {
-    margin-bottom: 40px;
-  }
+.project-section h1 {
+  margin-bottom: 40px;
+}
 
-  .project-section {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
+.project-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /**Projects Section**********************************************/
 
 /**Individual Project**********************************************/
 
-@media only screen and (max-width: 768px) {
-  .img-container {
-    width: 100%;
-  }
+.img-container {
+  width: 100%;
+}
 
-  .img-container img {
-    border: 2px solid rgba(0, 0, 0, 0.75);
-    border-radius: 8px;
-    width: 100%;
-  }
+.img-container img {
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  width: 100%;
+}
 
+.project {
+  padding-bottom: 25%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.base-info {
+  margin-top: 1vh;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.base-info h3 {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.base-info a i {
+  color: white;
+  font-size: 1.5em;
+}
+
+.base-info button {
+  margin-top: 5px;
+  padding: 5px 5px;
+  justify-self: end;
+
+  color: rgba(255, 255, 255, .65);
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+
+  letter-spacing: .2vw;
+  font-family: 'Pilat Wide';
+  font-weight: 300;
+}
+
+.base-info button i {
+  margin-left: 5px;
+}
+
+.details {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  padding: 2vh 0;
+
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.list-title {
+  padding: 2vh 0 10px;
+}
+
+.title-and-link {
+  display: flex;
+}
+
+.title-and-link a {
+  margin-left: 5%;
+}
+
+@media only screen and (min-width: 768px) {
   .project {
-    padding-bottom: 25%;
+    padding-bottom: 10%;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .img-container {
+    width: 50%;
   }
 
   .base-info {
+    width: 50%;
     margin-top: 1vh;
+    margin-left: 1vw;
     height: auto;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
   }
 
-  .base-info h3 {
-    font-weight: 300;
-    font-size: 1.5em;
+  .title-and-link {
+    display: flex;
   }
 
-  .base-info a i {
-    color: white;
-    font-size: 1.5em;
-  }
-
-  .base-info button {
-    margin-top: 5px;
-    padding: 5px 5px;
-    justify-self: end;
-
-    color: rgba(255, 255, 255, .65);
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: 5px;
-
-    letter-spacing: .2vw;
-    font-family: 'Pilat Wide';
-    font-weight: 300;
-  }
-
-  .base-info button i {
-    margin-left: 5px;
+  .title-and-link a {
+    margin-left: 5%;
   }
 
   .details {
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, .25);
-    display: flex;
-    flex-direction: column;
+    border: none;
   }
 
-  .description {
-    padding: 2vh 0;
 
-    font-size: 1em;
-    font-weight: 300;
-    line-height: 120%;
-  }
-
-  .list-title {
-    padding: 2vh 0 10px;
-  }
 }
 
-/**Individual Project**********************************************/
+/**Individual Project Element**********************************************/
