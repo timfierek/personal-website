@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.317ddbb4.css",
-    "main.js": "/personal-website/static/js/main.29a4e8c4.js",
-    "static/js/787.5809834d.chunk.js": "/personal-website/static/js/787.5809834d.chunk.js",
-    "static/media/recipe-search-hub-img.png": "/personal-website/static/media/recipe-search-hub-img.e5bccf0292927b9f8661.png",
-    "static/media/pfp2.jpg": "/personal-website/static/media/pfp2.50945b43f877e4248e1d.jpg",
-    "static/media/pfp1.jpg": "/personal-website/static/media/pfp1.5d5470444b01bb726916.jpg",
-    "static/media/meme-generator-img.png": "/personal-website/static/media/meme-generator-img.08605b87278a009b460a.png",
-    "static/media/java-pos-system-img.png": "/personal-website/static/media/java-pos-system-img.0dece83ca42ef3b8e4b0.png",
-    "static/media/TimelyEvents-img.png": "/personal-website/static/media/TimelyEvents-img.383cf5617dc0086e7ac4.png",
-    "static/media/steam-games-in-common-img.png": "/personal-website/static/media/steam-games-in-common-img.35028a21a8782530671e.png",
-    "index.html": "/personal-website/index.html",
-    "main.317ddbb4.css.map": "/personal-website/static/css/main.317ddbb4.css.map",
-    "main.29a4e8c4.js.map": "/personal-website/static/js/main.29a4e8c4.js.map",
-    "787.5809834d.chunk.js.map": "/personal-website/static/js/787.5809834d.chunk.js.map"
+    "main.css": "/static/css/main.317ddbb4.css",
+    "main.js": "/static/js/main.52674fdb.js",
+    "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
+    "static/media/recipe-search-hub-img.png": "/static/media/recipe-search-hub-img.e5bccf0292927b9f8661.png",
+    "static/media/pfp2.jpg": "/static/media/pfp2.50945b43f877e4248e1d.jpg",
+    "static/media/pfp1.jpg": "/static/media/pfp1.5d5470444b01bb726916.jpg",
+    "static/media/meme-generator-img.png": "/static/media/meme-generator-img.08605b87278a009b460a.png",
+    "static/media/java-pos-system-img.png": "/static/media/java-pos-system-img.0dece83ca42ef3b8e4b0.png",
+    "static/media/TimelyEvents-img.png": "/static/media/TimelyEvents-img.383cf5617dc0086e7ac4.png",
+    "static/media/steam-games-in-common-img.png": "/static/media/steam-games-in-common-img.35028a21a8782530671e.png",
+    "index.html": "/index.html",
+    "main.317ddbb4.css.map": "/static/css/main.317ddbb4.css.map",
+    "main.52674fdb.js.map": "/static/js/main.52674fdb.js.map",
+    "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317ddbb4.css",
-    "static/js/main.29a4e8c4.js"
+    "static/js/main.52674fdb.js"
   ]
 }
