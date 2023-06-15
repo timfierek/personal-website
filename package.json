@@ -1,7 +1,7 @@
 {
   "homepage":"https://timfierek.github.io/personal-website/",
   "name": "personal-website",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",

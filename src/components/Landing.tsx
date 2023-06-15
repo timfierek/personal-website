@@ -18,10 +18,10 @@ function Landing(props: any) {
                 <h2>(Software Engineer)</h2>
             </div>
 
-            <button className="horizontal-button" onClick={props.handleClick}>
-                <i className="fa-solid fa-angle-up"></i>
-                <p>Who am I?</p>
-            </button>
+            {/*<button className="horizontal-button" onClick={props.handleClick}>*/}
+            {/*    <i className="fa-solid fa-angle-up"></i>*/}
+            {/*    <p>Who am I?</p>*/}
+            {/*</button>*/}
         </div>
     )
 }

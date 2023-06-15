@@ -16,9 +16,9 @@ function App() {
         <Landing handleClick={showHideLanding} />
       }
 
-      {!displayLanding &&
-        <MainContent navigateHome={showHideLanding} />
-      }
+      {/*{!displayLanding &&*/}
+      {/*  <MainContent navigateHome={showHideLanding} />*/}
+      {/*}*/}
     </div>
   )
 }
